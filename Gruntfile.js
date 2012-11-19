@@ -12,7 +12,7 @@ module.exports = function( grunt ) {
 
     // specify an alternate install location for Bower
     bower: {
-      dir: 'app/components'
+      dir: 'public/components'
     },
 
     // Coffee to JS compilation
@@ -114,7 +114,7 @@ module.exports = function( grunt ) {
     output: 'dist',
 
     mkdirs: {
-      staging: 'app/'
+      staging: 'public/'
     },
 
     // Below, all paths are relative to the staging directory, which is a copy
@@ -124,32 +124,32 @@ module.exports = function( grunt ) {
 
     // concat css/**/*.css files, inline @import, output a single minified css
     css: {
-      'public/css/main.css': ['public/css/**/*.css']
+      'css/main.css': ['css/**/*.css']
     },
 
     // renames JS/CSS to prepend a hash of their contents for easier
     // versioning
     rev: {
-      js: 'public/js/**/*.js',
-      css: 'public/css/**/*.css',
-      img: 'public/img/**'
+      js: 'js/**/*.js',
+      css: 'css/**/*.css',
+      img: 'img/**'
     },
 
     // usemin handler should point to the file containing
     // the usemin blocks to be parsed
     'usemin-handler': {
-      html: 'public/index.html'
+      html: 'index.html'
     },
 
     // update references in HTML/CSS to revved files
     usemin: {
-      html: ['public/**/*.html'],
-      css: ['public/**/*.css']
+      html: ['**/*.html'],
+      css: ['**/*.css']
     },
 
     // HTML minification
     html: {
-      files: ['public/**/*.html']
+      files: ['**/*.html']
     },
 
     // Optimizes JPGs and PNGs (with jpegtran & optipng)
