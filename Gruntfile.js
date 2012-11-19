@@ -164,12 +164,12 @@ module.exports = function( grunt ) {
     // name / out / mainConfig file should be used. You can let it blank if
     // you're using usemin-handler to parse rjs config from markup (default
     // setup)
-    rjs: {
+    /*rjs: {
       // no minification, is done by the min task
       optimize: 'none',
       baseUrl: './js',
       wrap: true
-    },
+    },*/
   });
 
   // Alias the `test` task to run the `mocha` task instead
